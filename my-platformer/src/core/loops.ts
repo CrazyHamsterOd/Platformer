@@ -1,4 +1,6 @@
-class GaneLoop {
+import { Renderer } from "./renderer";
+
+export class GameLoop {
     private lastTime: number = 0;
     private deltaTime: number = 0;
 
@@ -17,6 +19,8 @@ class GaneLoop {
     }
 
     private render() {
-        console.log('render');
+        const renderer = new Renderer();
+        renderer.clear();
+        renderer.drawRect(0, 0, 100, 100, 'red');
     }
 }
